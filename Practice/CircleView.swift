@@ -14,8 +14,11 @@ struct CircleView: View {
         mark.image
             .frame(width: 250, height: 250)
             .clipShape(Circle())
+        // 모양 설정
             .overlay {
                 Circle().stroke(.gray, lineWidth: 4)
+                // Shape타입 안에 있는 속성, 선을 그릴 때 center부터 그림
+                // Rectangle같은 shape에 사용 가능
             }
             .shadow(radius: 7)
     }

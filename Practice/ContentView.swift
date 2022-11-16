@@ -14,6 +14,8 @@ struct ContentView: View {
         VStack {
             MapView()
                 .ignoresSafeArea(edges: .top)
+            // regions: SafeArea에서 제거된 사각형의 종류
+            // edges: 가장자리
                 .frame(height: 300)
             
             CircleView(mark: ModelData().marks[0])
@@ -32,7 +34,7 @@ struct ContentView: View {
                 }
                 .foregroundColor(.secondary)
                 
-                Divider()
+                Divider() // 구분선
                 
                 Text("애플에 대하여")
                     .font(.title2)
