@@ -11,7 +11,8 @@ import SwiftUI
 struct PracticeApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            CategoryContentView()
+                .environmentObject(ModelData())
         }
     }
 }
